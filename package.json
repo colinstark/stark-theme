@@ -1,0 +1,21 @@
+{
+	"name": "stark-industries",
+	"displayName": "Stark Industries Theme",
+	"description": "An elegant dark theme",
+	"version": "0.9.0",
+	"engines": {
+		"vscode": "^1.47.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "Stark Industries",
+				"uiTheme": "vs-dark",
+				"path": "./themes/stark-industries-color-theme.json"
+			}
+		]
+	}
+}
