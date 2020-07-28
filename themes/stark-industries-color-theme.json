@@ -296,7 +296,7 @@
 				"punctuation.decorator.ts",
 				"variable.other.readwrite.tsx",
 				"variable.other.readwrite.ts",
-				"punctuation.definition.entity",
+				"punctuation.definition.entity.ts",
 				"constant.character.entity"
 			],
 			"settings": {
@@ -758,7 +758,11 @@
 		},
 		{
 			"name": "CSS IDs",
-			"scope": ["entity.other.attribute-name.id.css", "entity.other.attribute-name.id.scss"],
+			"scope": [
+				"entity.other.attribute-name.id.css",
+				"entity.other.attribute-name.id.scss"
+				// "punctuation.definition.entity.css"
+			],
 			"settings": {
 				"foreground": "#ffffff"
 			}
