@@ -370,7 +370,9 @@
 				"keyword.control.import",
 				"keyword.control.from",
 				"keyword.control.export",
-				"keyword.control.default"
+				"keyword.control.default",
+				"support.type.object.module",
+				"support.function.js"
 			],
 			"settings": {
 				"fontStyle": "italic",
@@ -451,7 +453,7 @@
 		},
 		{
 			"name": "Tag Attribute",
-			"scope": ["meta.tag.block.any", "x - entity.other.attribute-name"],
+			"scope": ["meta.tag.block.any", "meta.tag.js", "meta.tag.attributes.js"],
 			"settings": {
 				"foreground": "#FC3768"
 			}
