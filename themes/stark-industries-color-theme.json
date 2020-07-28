@@ -258,6 +258,7 @@
 				"keyword.operator.relational",
 				"keyword.operator.increment",
 				"keyword.operator.decrement",
+				"keyword.operator.assignment.compound",
 				"keyword.control.conditional",
 				"keyword.control.trycatch",
 				"keyword.control.start-block"
@@ -354,7 +355,14 @@
 		},
 		{
 			"name": "Class",
-			"scope": ["entity.name.class", "entity.name.module", "entity.name.type", "storage.identifier", "support.class"],
+			"scope": [
+				"entity.name.class",
+				"entity.name.module",
+				"entity.name.type",
+				"storage.identifier",
+				"support.class",
+				"entity.name.label"
+			],
 			"settings": {
 				"foreground": "#FC3768"
 			}
@@ -804,7 +812,7 @@
 			"name": "expressions",
 			"scope": ["meta.var"],
 			"settings": {
-				"foreground": "#acacac"
+				"foreground": "#eee"
 			}
 		}
 	]
