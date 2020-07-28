@@ -127,15 +127,15 @@
 		"terminal.ansiBlue": "#0066da",
 		"terminal.ansiCyan": "#02E6D7",
 		"terminal.ansiGreen": "#2fa878",
-		"terminal.ansiMagenta": "#a982ff",
+		"terminal.ansiMagenta": "#908CFF",
 		"terminal.ansiRed": "#FC3768",
 		"terminal.ansiWhite": "#e5e5e5",
 		"terminal.ansiYellow": "#ffc062",
 		"terminal.ansiBrightBlack": "#666666",
-		"terminal.ansiBrightBlue": "#0066da",
+		"terminal.ansiBrightBlue": "#84c6f1",
 		"terminal.ansiBrightCyan": "#02E6D7",
-		"terminal.ansiBrightGreen": "#2fa878",
-		"terminal.ansiBrightMagenta": "#a982ff",
+		"terminal.ansiBrightGreen": "#5de4ae",
+		"terminal.ansiBrightMagenta": "#908CFF",
 		"terminal.ansiBrightRed": "#FC3768",
 		"terminal.ansiBrightWhite": "#e5e5e5",
 		"terminal.ansiBrightYellow": "#ffc062",
@@ -157,7 +157,7 @@
 			"name": "Comment",
 			"scope": ["comment", "string.comment"],
 			"settings": {
-				"foreground": "#555555"
+				"foreground": "#777777"
 			}
 		},
 		{
@@ -169,7 +169,7 @@
 		},
 		{
 			"name": "Number",
-			"scope": "constant.numeric",
+			"scope": ["constant.numeric"],
 			"settings": {
 				"foreground": "#908CFF"
 			}
@@ -187,8 +187,7 @@
 				"string.embedded.begin",
 				"string.embedded.end",
 				"punctuation.definition.template-expression",
-				"punctuation.section.embedded",
-				"meta.import.tsx"
+				"punctuation.section.embedded"
 			],
 			"settings": {
 				"foreground": "#FC3768"
@@ -201,6 +200,8 @@
 				"punctuation.section.embedded.end.js",
 				"punctuation.section.embedded.begin.erb",
 				"punctuation.section.embedded.end.erb",
+				"punctuation.section.embedded.begin.ruby",
+				"punctuation.section.embedded.end.ruby",
 				"source.elixir.embedded",
 				"punctuation.separator",
 				"punctuation.accessor",
@@ -218,7 +219,8 @@
 				"support.class.builtin",
 				"constant.character",
 				"constant.other",
-				"support.type.primitive"
+				"support.type.primitive",
+				"meta.import.tsx"
 			],
 			"settings": {
 				"foreground": "#FC3768"
@@ -239,15 +241,26 @@
 			}
 		},
 		{
+			"name": "Escaped Things",
+			"scope": ["constant.character.escape"],
+			"settings": {
+				"foreground": "#908CFF"
+			}
+		},
+
+		{
 			"name": "Operators",
 			"scope": [
 				"keyword.operator.logical",
 				"keyword.operator.constructor",
 				"keyword.operator.ternary",
-				"keyword.control.conditional",
 				"keyword.operator.comparison",
 				"keyword.operator.relational",
-				"keyword.control.trycatch"
+				"keyword.operator.increment",
+				"keyword.operator.decrement",
+				"keyword.control.conditional",
+				"keyword.control.trycatch",
+				"keyword.control.start-block"
 			],
 			"settings": {
 				"foreground": "#5de4ae"
@@ -261,8 +274,31 @@
 			}
 		},
 		{
+			"name": "Ruby Symbols",
+			"scope": ["keyword", "meta.import"],
+			"settings": {
+				"foreground": "#FC3768"
+			}
+		},
+		{
 			"name": "Console",
 			"scope": ["support.class.console"],
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#908CFF"
+			}
+		},
+		{
+			"name": "TS Decorators",
+			"scope": [
+				"meta.decorator.tsx",
+				"meta.decorator.ts",
+				"punctuation.decorator.ts",
+				"variable.other.readwrite.tsx",
+				"variable.other.readwrite.ts",
+				"punctuation.definition.entity",
+				"constant.character.entity"
+			],
 			"settings": {
 				"fontStyle": "italic",
 				"foreground": "#908CFF"
@@ -348,8 +384,8 @@
 				"variable.other",
 				"variable.other.property",
 				"variable.other.block",
-				"entity.name.function",
-				"meta.function-call"
+				"entity.name.function"
+				// "meta.function-call"
 			],
 			"settings": {
 				"foreground": "#cabdaa"
@@ -359,7 +395,7 @@
 			"name": "Inherited Class",
 			"scope": "entity.other.inherited-class",
 			"settings": {
-				"foreground": "#84c6f1"
+				"foreground": "#908CFF"
 			}
 		},
 		{
@@ -386,13 +422,6 @@
 				"foreground": "#84c6f1"
 			}
 		},
-		// {
-		// 	"name": "Function keyword",
-		// 	"scope": ["storage.type.function."],
-		// 	"settings": {
-		// 		"foreground": "#84c6f1"
-		// 	}
-		// },
 		{
 			"name": "Function argument",
 			"scope": ["variable.parameter", "entity.name.variable.parameter", "parameter.variable"],
@@ -433,12 +462,7 @@
 		},
 		{
 			"name": "Special tags",
-			"scope": [
-				"entity.name.tag.template.html",
-				"entity.name.tag.script.html",
-				"entity.name.tag.style.html"
-				// "support.class.component.js"
-			],
+			"scope": ["entity.name.tag.template.html", "entity.name.tag.script.html", "entity.name.tag.style.html"],
 			"settings": {
 				"foreground": "#ffffff"
 			}
@@ -446,14 +470,20 @@
 
 		{
 			"name": "Tag Class and ID",
-			"scope": ["entity.name.tag.class", "entity.name.tag.id", "entity.name.type.class"],
+			"scope": [
+				"entity.name.tag.class",
+				"entity.name.tag.id",
+				"entity.name.type.class",
+				"support.class.component.js",
+				"support.class.component.jsx"
+			],
 			"settings": {
 				"foreground": "#84c6f1"
 			}
 		},
 		{
 			"name": "Tag Attribute",
-			"scope": ["meta.tag.block.any", "meta.tag.js", "meta.tag.attributes.js"],
+			"scope": ["meta.tag.block.any", "meta.tag.attributes.js"],
 			"settings": {
 				"foreground": "#FC3768"
 			}
@@ -470,7 +500,7 @@
 			"name": "Library constant",
 			"scope": "support.constant",
 			"settings": {
-				"foreground": "#84c6f1"
+				"foreground": "#908CFF"
 			}
 		},
 		{
@@ -688,6 +718,14 @@
 			}
 		},
 		{
+			"name": "Markup: Text",
+			"scope": ["text.html.markdown.jsx"],
+			"settings": {
+				"foreground": "#ffffff"
+			}
+		},
+
+		{
 			"name": "Markup: List Punctuation",
 			"scope": "punctuation.definition.list_item.markdown",
 			"settings": {
@@ -704,7 +742,8 @@
 				"source.less support.type.property-name",
 				"source.stylus support.type.property-name",
 				"source.postcss support.type.property-name",
-				"keyword.control.at-rule"
+				"keyword.control.at-rule",
+				"support.type.primitive.ts"
 			],
 			"settings": {
 				"foreground": "#5DE4AE"
