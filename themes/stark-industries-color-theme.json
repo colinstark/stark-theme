@@ -523,7 +523,8 @@
 				"support.type.property-name.css",
 				"support.type.property-name.scss",
 				"support.type.property-name.less",
-				"support.type.property-name.sass"
+				"support.type.property-name.sass",
+				"support.type.property-name.media.css"
 			],
 			"settings": {
 				"foreground": "#cabdaa"
