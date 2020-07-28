@@ -451,11 +451,19 @@
 		},
 		{
 			"name": "Tag Attribute",
-			"scope": ["entity.other.attribute-name"],
+			"scope": ["meta.tag.block.any", "x - entity.other.attribute-name"],
 			"settings": {
 				"foreground": "#FC3768"
 			}
 		},
+		{
+			"name": "Directives (Vue etc)",
+			"scope": ["meta.directive", "meta.directive.vue"],
+			"settings": {
+				"foreground": "#5de4ae"
+			}
+		},
+
 		{
 			"name": "Library constant",
 			"scope": "support.constant",
@@ -652,7 +660,7 @@
 			"scope": "markup.heading.markdown",
 			"settings": {
 				"fontStyle": "bold",
-				"foreground": "#FC3768"
+				"foreground": "#cabdaa"
 			}
 		},
 		{

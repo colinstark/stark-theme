@@ -2,7 +2,7 @@
 	"name": "stark-industries",
 	"displayName": "Stark Industries",
 	"description": "A muted dark theme, partially inspired by Monokai.",
-	"version": "1.0.2",
+	"version": "1.0.4",
 	"publisher": "colinstark",
 	"license": "LICENSE.md",
 	"engines": {
