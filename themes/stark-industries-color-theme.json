@@ -554,7 +554,15 @@
 		},
 		{
 			"name": "StyleSheet Variable",
-			"scope": ["variable.css", "variable.scss", "variable.less", "variable.sass", "entity.name.tag.reference"],
+			"scope": [
+				"variable.css",
+				"variable.scss",
+				"variable.less",
+				"variable.sass",
+				"variable.argument.css",
+				"variable.argument.scss",
+				"entity.name.tag.reference"
+			],
 			"settings": {
 				"foreground": "#FC3768"
 			}
