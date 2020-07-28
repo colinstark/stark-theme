@@ -1,14 +1,28 @@
 {
 	"name": "stark-industries",
-	"displayName": "Stark Industries Theme",
-	"description": "An elegant dark theme",
-	"version": "0.9.0",
+	"displayName": "Stark Industries",
+	"description": "A muted dark theme, partially inspired by Monokai.",
+	"version": "1.0.0",
+	"publisher": "colinstark",
+	"license": "LICENSE.md",
 	"engines": {
 		"vscode": "^1.47.0"
 	},
 	"categories": [
 		"Themes"
 	],
+	"keywords": [
+		"Theme",
+		"Dark Theme"
+	],
+	"galleryBanner": {
+		"color": "#222222",
+		"theme": "light"
+	},
+	"icon": "stark-icon.png",
+	"scripts": {
+		"publish": "vsce publish"
+	},
 	"contributes": {
 		"themes": [
 			{
